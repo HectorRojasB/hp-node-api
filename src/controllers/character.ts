@@ -22,8 +22,9 @@ const updateCharacter = (req: Request, res: Response) => {
   }
 };
 
-const postCharacter = (req: Request, res: Response) => {
+const postCharacter = ({ body }: Request, res: Response) => {
   try {
+    res.send(body);
   } catch (e) {
     handleHttp(res, "ERROR_POST_CHARACTER");
   }
